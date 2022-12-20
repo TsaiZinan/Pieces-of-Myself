@@ -1,7 +1,9 @@
 import React from 'react'
-import ReactMarkdown from 'react-markdown';
+// import ReactMarkdown from 'react-markdown';
 
 import './HomePage.css'
+
+import MdDisplay from '../mdDisplay/MdDisplay';
 
 // import about from '../../blogs/2022/新十条.md'
 import about from '../../blogs/about.md'
@@ -15,15 +17,15 @@ const filenames = webpackContext.keys()
 
 const HomePage = () => {
 
-  let [readable, setReadable] = React.useState({ md: "" });
+  // let [readable, setReadable] = React.useState({ md: "" });
 
-  React.useEffect(() => {
-    fetch(about)
-      .then((res) => res.text())
-      .then((md) => {
-        setReadable({ md });
-      });
-  }, []);
+  // React.useEffect(() => {
+  //   fetch(about)
+  //     .then((res) => res.text())
+  //     .then((md) => {
+  //       setReadable({ md });
+  //     });
+  // }, []);
 
 
 
@@ -37,7 +39,9 @@ const HomePage = () => {
         })}
       </div>
       {/* <ReactMarkdown># Home *page*!</ReactMarkdown> */}
-      <ReactMarkdown children={readable.md} />
+      {/* <ReactMarkdown children={readable.md} /> */}
+
+      <MdDisplay inputMdText={about} />
 
     </div>
   )
