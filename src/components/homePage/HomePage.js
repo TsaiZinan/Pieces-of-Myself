@@ -17,15 +17,6 @@ const filenames = webpackContext.keys()
 
 const HomePage = () => {
 
-  // let [readable, setReadable] = React.useState({ md: "" });
-
-  // React.useEffect(() => {
-  //   fetch(about)
-  //     .then((res) => res.text())
-  //     .then((md) => {
-  //       setReadable({ md });
-  //     });
-  // }, []);
 
 
 
