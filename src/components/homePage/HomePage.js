@@ -4,15 +4,16 @@ import React from 'react'
 import './HomePage.css'
 
 import MdDisplay from '../mdDisplay/MdDisplay';
+import ArticlePage from '../articlePage/ArticlePage';
 
 // import about from '../../blogs/2022/新十条.md'
 import about from '../../blogs/about.md'
 
+// read the files name list of blog folder
 // https://stackoverflow.com/questions/65587431/load-a-list-of-internal-files-in-react
 const webpackContext = require.context('../../blogs/', false, /\.md$/)
 const filenames = webpackContext.keys()
-// const key_value_pairs = filenames.map(name => [name.match(/\/(\w+)\.md$/)[1], webpackContext(name)])
-// const messages = Object.fromEntries(key_value_pairs)
+
 
 
 const HomePage = () => {
@@ -32,7 +33,8 @@ const HomePage = () => {
       {/* <ReactMarkdown># Home *page*!</ReactMarkdown> */}
       {/* <ReactMarkdown children={readable.md} /> */}
 
-      <MdDisplay inputMdText={about} />
+      {/* <MdDisplay inputMdText={about} /> */}
+      <ArticlePage article={about} />
 
     </div>
   )
