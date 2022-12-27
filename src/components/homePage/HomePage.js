@@ -16,12 +16,6 @@ const filenames = webpackContext.keys()
 
 const tableOfContentsHandle = () => {
 
-
-
-
-
-
-
   // read the files name list of blog folder and remove the './'
   // https://stackoverflow.com/questions/65587431/load-a-list-of-internal-files-in-react
   const webpackContext = require.context('../../blogs/', false, /\.md$/)
@@ -39,7 +33,7 @@ const tableOfContentsHandle = () => {
   // spilt the file name to object
   // https://stackoverflow.com/a/72917891/20787775
   let filenameObject = Object.fromEntries(filtedFilenames.map((t) => [t.toString().substr(0, 6), t.toString().substr(7)]))
-  // console.log(filenameObject)
+  console.log(filenameObject)
 
 
 
@@ -51,10 +45,12 @@ const tableOfContentsHandle = () => {
     Year: obj[0].slice(0, 2),
     Month: obj[0].slice(2, 4),
     Day: obj[0].slice(4, 6),
-    Date: obj[0], Title: obj[1]
+    Date: obj[0], 
+    Title: obj[1].slice(0, -3),
+    path: obj[0] + '-' + obj[1]
   }));
 
-  // console.log(filenameObjectWithKey)
+  console.log(filenameObjectWithKey)
 
   // group text name list by year
   // https://stackoverflow.com/a/40774906/20787775
@@ -68,31 +64,6 @@ const tableOfContentsHandle = () => {
   // console.log(filenameObjectWithKeyGroupByYear)
 
 
-
-  // console.log(Object.entries(filenameObjectWithKeyGroupByYear))
-
-  // for (const [key, value] of Object.entries(filenameObjectWithKeyGroupByYear)) {
-  //   // console.log(`${key}: ${value}`);
-  // }
-
-  // var aaaa = Object.entries(filenameObjectWithKeyGroupByYear).forEach(([key, val]) => {
-  //   console.log(key); // the name of the current key.
-  //   console.log(val); // the value of the current key.
-
-  //   let mon = val.reduce(function (r, a) {
-  //     r[a.Month] = r[a.Month] || [];
-  //     r[a.Month].push(a);
-  //     // console.log(a.Month)
-  //     return r;
-  //   }, Object.create(null));
-
-  //   console.log(mon)
-  //   // aaaa.push({key: mon})
-  //   console.log('val-after')
-  //   console.log(val)
-  // });
-
-  // console.log(aaaa)
 
   const addMonth = (input) => {
     let newObject = {}
@@ -122,7 +93,7 @@ const tableOfContentsHandle = () => {
   let finalObject = addMonth(filenameObjectWithKeyGroupByYear)
 
   // console.log(filenameObject)
-  console.log(finalObject)
+  // console.log(finalObject)
   // return filenameObject;
   return finalObject;
 }
