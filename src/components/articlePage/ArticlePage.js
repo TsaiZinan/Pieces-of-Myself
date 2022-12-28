@@ -1,12 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { Routes, Route, useParams } from 'react-router-dom';
+
 import MdDisplay from '../mdDisplay/MdDisplay';
 
 const ArticlePage = props => {
+
+  const { path } = useParams();
+  let mdPath = '/Pieces-of-Myself/static/media/' + path
+
   return (
     <div>
-      <MdDisplay inputMdText={props.article} />
+      {/* <div>{path}</div>
+      <div>{props.article}</div>
+      {console.log(path)}
+      {console.log(props.article)} */}
+      <MdDisplay inputMdText={mdPath} />
     </div>
   )
 }

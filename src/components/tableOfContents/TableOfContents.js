@@ -2,33 +2,90 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 
+import ArticlePage from '../articlePage/ArticlePage';
+
 const TableOfContents = props => {
 
 
   // read the files name list of blog folder
   // https://stackoverflow.com/questions/65587431/load-a-list-of-internal-files-in-react
   const webpackContext = require.context('../../blogs/', false, /\.md$/)
+  // console.log(webpackContext.keys());
+  // console.log(webpackContext.values());
   const filenames = webpackContext.keys()
 
   const tableOfContentsHandle = () => {
 
     // read the files name list of blog folder and remove the './'
     // https://stackoverflow.com/questions/65587431/load-a-list-of-internal-files-in-react
-    const webpackContext = require.context('../../blogs/', false, /\.md$/)
+    // const webpackContext1 = require.context('../../blogs/', false, /\.md$/)
     let filenames = webpackContext.keys().map(s => s.slice(2));
+
+    // console.log('----------1-----------')
+    // console.log(filenames)
+
+
+
+    function importAll(r) {
+      let mdFiles = {};
+      r.keys().map(item => { mdFiles[item.replace('./', '')] = r(item); });
+      return mdFiles;
+    }
+
+    const mdFiles = importAll(webpackContext);
+    console.log('----------1.1-----------')
+    console.log(importAll(webpackContext))
+
+
+    let test2 = Object.keys(mdFiles).filter(key => /\d{6}[-]{1}/.test(key)).reduce((acc, key) => {
+      acc[key] = mdFiles[key];
+      return acc;
+    }, {});
+    // console.log('----------1.2-----------')
+    // console.log(test2)
+
+    var filenameObjectWithKey5 = Object.entries(test2).map(obj => ({
+      Year: obj[0].slice(0, 2),
+      Month: obj[0].slice(2, 4),
+      Day: obj[0].slice(4, 6),
+      Date: obj[0].slice(0, 6),
+      Title: obj[0].slice(7, -3),
+      path: obj[0],
+      link: obj[1]
+    }));
+
+    // console.log('----------1.5-----------')
+    // console.log(filenameObjectWithKey5)
+
+    // let mdFilesWithDate = mdFiles.filter(item => /\d{6}[-]{1}/.test(item));
+
+    // console.log(Object.values(mdFiles));
+
+
+
+
+
+
+
+
+
+
 
     // order name list, nor sure if it work
     // console.log(filenames)
     let orderedFilenames = filenames.sort();
+    // console.log('----------2-----------')
     // console.log(orderedFilenames)
 
     // remove the file without the name formating of 'yymmdd-'
     let filtedFilenames = orderedFilenames.filter(item => /\d{6}[-]{1}/.test(item));
+    // console.log('----------3-----------')
     // console.log(filtedFilenames);
 
     // spilt the file name to object
     // https://stackoverflow.com/a/72917891/20787775
     let filenameObject = Object.fromEntries(filtedFilenames.map((t) => [t.toString().substr(0, 6), t.toString().substr(7)]))
+    // console.log('----------4-----------')
     // console.log(filenameObject)
 
 
@@ -46,11 +103,12 @@ const TableOfContents = props => {
       path: obj[0] + '-' + obj[1]
     }));
 
+    // console.log('----------5-----------')
     // console.log(filenameObjectWithKey)
 
     // group text name list by year
     // https://stackoverflow.com/a/40774906/20787775
-    var filenameObjectWithKeyGroupByYear = filenameObjectWithKey.reduce(function (r, a) {
+    var filenameObjectWithKeyGroupByYear = filenameObjectWithKey5.reduce(function (r, a) {
       r[a.Year] = r[a.Year] || [];
       r[a.Year].push(a);
       return r;
@@ -87,6 +145,7 @@ const TableOfContents = props => {
     let finalObject = addMonth(filenameObjectWithKeyGroupByYear)
 
     // console.log(filenameObject)
+    // console.log('----------FINAL-----------')
     // console.log(finalObject)
     // return filenameObject;
     return finalObject;
@@ -98,7 +157,8 @@ const TableOfContents = props => {
 
   return (
     <div>
-
+      {/* <p>111</p> */}
+      {/* {console.log(tableOfContentsHandle())} */}
       {
         // display the year by descending
         Object.keys(tableOfContentsHandle()).sort().reverse().map((year, yearIndex) => {
@@ -124,9 +184,11 @@ const TableOfContents = props => {
                           // console.log(tableOfContentsHandle()[year][0][month][0].Title);
                           return (
                             <div>
-                              {title.Date + ' : ' + title.Title}
+                              
 
-                              { }
+                              <Link to={title.link}>
+                              {title.Date + ' : ' + title.Title + ' * ' + title.link}
+                              </Link>
                             </div>
                           )
                         })}
