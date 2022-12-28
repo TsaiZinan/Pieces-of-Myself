@@ -1,180 +1,93 @@
 import React from 'react'
 // import ReactMarkdown from 'react-markdown';
 
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
 import './HomePage.css'
 
 import MdDisplay from '../mdDisplay/MdDisplay';
 import ArticlePage from '../articlePage/ArticlePage';
+import TableOfContents from '../tableOfContents/TableOfContents';
 
-// import about from '../../blogs/2022/新十条.md'
+import Testabout from '../Testabout';
+
+import about10 from '../../blogs/221209-新十条.md'
 import about from '../../blogs/about.md'
 
-// read the files name list of blog folder
-// https://stackoverflow.com/questions/65587431/load-a-list-of-internal-files-in-react
-const webpackContext = require.context('../../blogs/', false, /\.md$/)
-const filenames = webpackContext.keys()
-
-const tableOfContentsHandle = () => {
+import mdFiless from '../../blogs/index'
 
 
-
-
-
-
-
-  // read the files name list of blog folder and remove the './'
-  // https://stackoverflow.com/questions/65587431/load-a-list-of-internal-files-in-react
-  const webpackContext = require.context('../../blogs/', false, /\.md$/)
-  let filenames = webpackContext.keys().map(s => s.slice(2));
-
-  // order name list, nor sure if it work
-  // console.log(filenames)
-  let orderedFilenames = filenames.sort();
-  // console.log(orderedFilenames)
-
-  // remove the file without the name formating of 'yymmdd-'
-  let filtedFilenames = orderedFilenames.filter(item => /\d{6}[-]{1}/.test(item));
-  // console.log(filtedFilenames);
-
-  // spilt the file name to object
-  // https://stackoverflow.com/a/72917891/20787775
-  let filenameObject = Object.fromEntries(filtedFilenames.map((t) => [t.toString().substr(0, 6), t.toString().substr(7)]))
-  // console.log(filenameObject)
-
-
-
-
-
-  // add keys to objects
-  // https://stackoverflow.com/a/44407980/20787775
-  var filenameObjectWithKey = Object.entries(filenameObject).map(obj => ({
-    Year: obj[0].slice(0, 2),
-    Month: obj[0].slice(2, 4),
-    Day: obj[0].slice(4, 6),
-    Date: obj[0], Title: obj[1]
-  }));
-
-  // console.log(filenameObjectWithKey)
-
-  // group text name list by year
-  // https://stackoverflow.com/a/40774906/20787775
-  var filenameObjectWithKeyGroupByYear = filenameObjectWithKey.reduce(function (r, a) {
-    r[a.Year] = r[a.Year] || [];
-    r[a.Year].push(a);
-    return r;
-  }, Object.create(null));
-
-  // console.log('filenameObjectWithKeyGroupByYear:')
-  // console.log(filenameObjectWithKeyGroupByYear)
-
-
-
-  // console.log(Object.entries(filenameObjectWithKeyGroupByYear))
-
-  // for (const [key, value] of Object.entries(filenameObjectWithKeyGroupByYear)) {
-  //   // console.log(`${key}: ${value}`);
-  // }
-
-  // var aaaa = Object.entries(filenameObjectWithKeyGroupByYear).forEach(([key, val]) => {
-  //   console.log(key); // the name of the current key.
-  //   console.log(val); // the value of the current key.
-
-  //   let mon = val.reduce(function (r, a) {
-  //     r[a.Month] = r[a.Month] || [];
-  //     r[a.Month].push(a);
-  //     // console.log(a.Month)
-  //     return r;
-  //   }, Object.create(null));
-
-  //   console.log(mon)
-  //   // aaaa.push({key: mon})
-  //   console.log('val-after')
-  //   console.log(val)
-  // });
-
-  // console.log(aaaa)
-
-  const addMonth = (input) => {
-    let newObject = {}
-    Object.entries(input).forEach(([key, val]) => {
-      // console.log(key); // the name of the current key.
-      // console.log(val); // the value of the current key.
-
-      let mon = val.reduce(function (r, a) {
-        r[a.Month] = r[a.Month] || [];
-        r[a.Month].push(a);
-        // console.log(a.Month)
-        return r;
-      }, Object.create(null));
-
-      // console.log(mon)
-      newObject[key] = [mon];
-      // console.log('val-after')
-      // console.log(val)
-    });
-
-    return newObject;
-  }
-
-  // console.log(addMonth(filenameObjectWithKeyGroupByYear))
-
-
-  let finalObject = addMonth(filenameObjectWithKeyGroupByYear)
-
-  // console.log(filenameObject)
-  console.log(finalObject)
-  // return filenameObject;
-  return finalObject;
-}
 
 
 const HomePage = () => {
 
 
+  function importAll(r) {
+    let mdFiles = {};
+    r.keys().map(item => { mdFiles[item.replace('./', '')] = r(item); });
+    return mdFiles;
+  }
+
+  const mdFiles = importAll(require.context('../../blogs/', false, /\.md$/));
+
+  // console.log(Object.values(mdFiles)[3]);
+  // console.log(about);
+  
+
+  // const testText9 = require(`../../blogs/${Object.keys(mdFiles)[3]}`)
+  // const testText10 = require(`../../blogs/${Object.keys(mdFiles)[4]}`)
+  // console.log(testText10);
+  // console.log(about);
 
 
   return (
-    <div className='Homepage'>
-      <div>
-        {Object.keys(tableOfContentsHandle()).sort().reverse().map((year, yearIndex) => {
-          // console.log(year);
-          // console.log(tableOfContentsHandle()[year][0]);
-          return (
-            <div>
-              {'Year: '+year}
+    <Router>
+      <div className='Homepage'>
 
-              {Object.keys(tableOfContentsHandle()[year][0]).sort().reverse().map((month, monthIndex) => {
-                // console.log(month);
-                // console.log(tableOfContentsHandle()[year][0][month]);
-                return (
-                  <div>
-                    {'Month: '+month}
+        <Link to='/Pieces-of-Myself/static/media/about.8a0c2a8e0261b8621e97.md'>
+          <p>About</p>
+        </Link>
+        <Link to='/Pieces-of-Myself/'>
+          <p>Table</p>
+        </Link>
+        <Link to='/Pieces-of-Myself/static/media/221209-新十条.b666503a8aa5a6043587.md'>
+          <p>10</p>
+        </Link>
+        <Link to='/Pieces-of-Myself/9'>
+          <p>9</p>
+        </Link>
 
-                    {tableOfContentsHandle()[year][0][month].reverse().map((title, titleIndex) => {
-                      // console.log(title);
-                      // console.log(tableOfContentsHandle()[year][0][month][0].Title);
-                      return (
-                        <div>
-                          {title.Date + ' : ' + title.Title}
 
-                          { }
-                        </div>
-                      )
-                    })}
-                  </div>
-                )
-              })}
-            </div>
-          )
-        })}
+        
+        {/* <ArticlePage article={testText10} /> */}
+
+
+
+        <Routes>
+          <Route path="/Pieces-of-Myself/aaa" element={<Testabout />} />
+          <Route path="/Pieces-of-Myself/" element={<TableOfContents />} />
+          <Route path="/Pieces-of-Myself/static/media/:path" element={<ArticlePage />} />
+          {/* <Route path="/">
+            <ArticlePage article={about} />
+          </Route> */}
+        </Routes>
+
+
+
+
+
+
+        {/* <ReactMarkdown># Home *page*!</ReactMarkdown> */}
+        {/* <ReactMarkdown children={readable.md} /> */}
+
+        {/* <MdDisplay inputMdText={about} /> */}
+        {/* <Testabout /> */}
+        {/* <TableOfContents /> */}
+        {/* <ArticlePage article={about} /> */}
+
       </div>
-      {/* <ReactMarkdown># Home *page*!</ReactMarkdown> */}
-      {/* <ReactMarkdown children={readable.md} /> */}
+    </Router>
 
-      {/* <MdDisplay inputMdText={about} /> */}
-      <ArticlePage article={about} />
-
-    </div>
   )
 }
 
