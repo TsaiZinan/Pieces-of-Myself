@@ -23,7 +23,10 @@ const MdDisplay = props => {
 
   return (
     <div>
-      <ReactMarkdown children={readable.md} />
+      <ReactMarkdown
+        children={readable.md}
+        components={{ img: ({ node, ...props }) => <img style={{ maxWidth: '100%' }}{...props} /> }}
+      />
     </div>
   )
 }
