@@ -1,0 +1,11 @@
+.articlePage {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+@media screen and (max-width: 710px) {
+  .articlePage {
+    width: 85%;
+  }
+}

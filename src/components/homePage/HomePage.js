@@ -7,6 +7,7 @@ import './HomePage.css'
 
 import MdDisplay from '../mdDisplay/MdDisplay';
 import ArticlePage from '../articlePage/ArticlePage';
+import AboutPage from '../aboutPage/AboutPage';
 import TableOfContents from '../tableOfContents/TableOfContents';
 
 
@@ -32,19 +33,28 @@ const HomePage = () => {
 
   return (
     <Router>
-      <div className='Homepage'>
+      <div className='homepage'>
 
-        <Link to='/Pieces-of-Myself/about'>
-          <p>About</p>
-        </Link>
-        <Link to='/Pieces-of-Myself/'>
-          <p>Table</p>
-        </Link>
+        <div className='homepage-nav'>
+
+          <Link to='/Pieces-of-Myself/' className='homepage-nav-text'>
+            <p>Home</p>
+          </Link>
+          <Link to='/Pieces-of-Myself/about' className='homepage-nav-text'>
+            <p>About</p>
+          </Link>
+
+        </div>
+
+
 
 
 
         <Routes>
-          <Route path="/Pieces-of-Myself/about" element={<MdDisplay inputMdText={about} />} />
+          {/* <div className='homepage-about'>
+            <Route path="/Pieces-of-Myself/about" element={<MdDisplay inputMdText={about} />} />
+          </div> */}
+          <Route path="/Pieces-of-Myself/about" element={<AboutPage about={about} />} />
           <Route path="/Pieces-of-Myself/" element={<TableOfContents />} />
           <Route path="/Pieces-of-Myself/static/media/:path" element={<ArticlePage />} />
         </Routes>

@@ -1,6 +1,7 @@
 import React from 'react'
-
 import { Link } from 'react-router-dom';
+
+import './TableOfContents.css';
 
 import MdDisplay from '../mdDisplay/MdDisplay';
 
@@ -98,13 +99,17 @@ const TableOfContents = props => {
     return finalObject;
   }
 
+  const monthConverter = (month) => {
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    return monthNames[month-1]
+  }
 
 
 
 
   return (
-    <div>
-      <div>
+    <div  className='tableOfContents'>
+      <div   className='tableOfContents-about'>
         {<MdDisplay inputMdText={title} />}
       </div>
       {
@@ -113,9 +118,9 @@ const TableOfContents = props => {
           // console.log(year);
           // console.log(tableOfContentsHandle()[year][0]);
           return (
-            <div>
+            <div className='tableOfContents-main'>
               <div className='tableOfContents-year'>
-                {'Year: ' + year}
+                {year}
               </div>
 
               {/* display the month by descending */}
@@ -123,9 +128,9 @@ const TableOfContents = props => {
                 // console.log(month);
                 // console.log(tableOfContentsHandle()[year][0][month]);
                 return (
-                  <div>
+                  <div className='tableOfContents-month-block'>
                     <div className='tableOfContents-month'>
-                      {'Month: ' + month}
+                      {monthConverter(month)}
                     </div>
 
                     {/* display the title by date descending */}
@@ -133,8 +138,8 @@ const TableOfContents = props => {
                       // console.log(title);
                       // console.log(tableOfContentsHandle()[year][0][month][0].Title);
                       return (
-                        <div className='tableOfContents-title'>
-                          <Link to={title.link}>
+                        <div className='tableOfContents-title-block'>
+                          <Link to={title.link} className='tableOfContents-title'>
                             {title.Title}
                           </Link>
                         </div>
