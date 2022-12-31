@@ -1,27 +1,23 @@
 {
   "files": {
-    "main.css": "/Pieces-of-Myself/static/css/main.45250e1c.css",
-    "main.js": "/Pieces-of-Myself/static/js/main.cd36918f.js",
+    "main.css": "/Pieces-of-Myself/static/css/main.1a57b0c7.css",
+    "main.js": "/Pieces-of-Myself/static/js/main.0ff95002.js",
     "static/js/787.6b0c5608.chunk.js": "/Pieces-of-Myself/static/js/787.6b0c5608.chunk.js",
-    "static/media/20221125-看门狗.md": "/Pieces-of-Myself/static/media/20221125-看门狗.8a7909281290b1bcb73c.md",
-    "static/media/about.md": "/Pieces-of-Myself/static/media/about.83cf64be5c9094229998.md",
-    "static/media/20221209-新十条.md": "/Pieces-of-Myself/static/media/20221209-新十条.927c38f738fbd7dc103a.md",
+    "static/media/20221125-看门狗：军团的游玩感想.md": "/Pieces-of-Myself/static/media/20221125-看门狗：军团的游玩感想.8a7909281290b1bcb73c.md",
+    "static/media/20221231-中国海军喷气式飞机飞越南海，距离美国空军飞机不到 10 英尺.md": "/Pieces-of-Myself/static/media/20221231-中国海军喷气式飞机飞越南海，距离美国空军飞机不到 10 英尺.55b6fafa64ac71e84889.md",
+    "static/media/20220119-react-markdown.md": "/Pieces-of-Myself/static/media/20220119-react-markdown.05d5f87f0df5d8df1fad.md",
+    "static/media/about.md": "/Pieces-of-Myself/static/media/about.9703ad40333184775f58.md",
+    "static/media/20221209-12月9日新十条发布后的一点想法.md": "/Pieces-of-Myself/static/media/20221209-12月9日新十条发布后的一点想法.927c38f738fbd7dc103a.md",
+    "static/media/20231209-China bridles as EU states prepare to scale up Covid monitoring.md": "/Pieces-of-Myself/static/media/20231209-China bridles as EU states prepare to scale up Covid monitoring.ab55eec0bab13f1dbd22.md",
     "index.html": "/Pieces-of-Myself/index.html",
-    "static/media/title.md": "/Pieces-of-Myself/static/media/title.9c2f9a9a3cddd918bf40.md",
-    "static/media/20221231-test.md": "/Pieces-of-Myself/static/media/20221231-test.3be571026a8dfb99dec7.md",
+    "static/media/title.md": "/Pieces-of-Myself/static/media/title.a8c30f7b22a3f6e607bc.md",
     "static/media/20221229-圣诞.md": "/Pieces-of-Myself/static/media/20221229-圣诞.ecf0e77576db97faf426.md",
-    "static/media/20230101-123.md": "/Pieces-of-Myself/static/media/20230101-123.86ac1aefedec213a8f69.md",
-    "static/media/20231209-23年.md": "/Pieces-of-Myself/static/media/20231209-23年.4d8c0e8f60b1a001dea6.md",
-    "static/media/20060606-kkk.md": "/Pieces-of-Myself/static/media/20060606-kkk.31d6cfe0d16ae931b73c.md",
-    "static/media/20220119-dasjdkhskadh.md": "/Pieces-of-Myself/static/media/20220119-dasjdkhskadh.31d6cfe0d16ae931b73c.md",
-    "static/media/20220501-dhsakjh.md": "/Pieces-of-Myself/static/media/20220501-dhsakjh.31d6cfe0d16ae931b73c.md",
-    "static/media/20230687-dadda.md": "/Pieces-of-Myself/static/media/20230687-dadda.31d6cfe0d16ae931b73c.md",
-    "main.45250e1c.css.map": "/Pieces-of-Myself/static/css/main.45250e1c.css.map",
-    "main.cd36918f.js.map": "/Pieces-of-Myself/static/js/main.cd36918f.js.map",
+    "main.1a57b0c7.css.map": "/Pieces-of-Myself/static/css/main.1a57b0c7.css.map",
+    "main.0ff95002.js.map": "/Pieces-of-Myself/static/js/main.0ff95002.js.map",
     "787.6b0c5608.chunk.js.map": "/Pieces-of-Myself/static/js/787.6b0c5608.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45250e1c.css",
-    "static/js/main.cd36918f.js"
+    "static/css/main.1a57b0c7.css",
+    "static/js/main.0ff95002.js"
   ]
 }

@@ -21,4 +21,20 @@
 ## 使用说明
 
 
+# Pieces-of-Myself
 
+Pieces-of-Myself is a markdown component for React.
+
+Pieces-of-Myself 是一个基于 React 的 Blog 系统。
+
+👉 Changes are re-rendered as you type.
+
+👈 Try writing some markdown on the left.
+
+## 优点
+
+* 完全基于 Github 云端，不需本地运行
+* 不会遭受审查
+* 基于 markdown 格式，脱离平台依赖，无数软件支持
+* 随时可以下载备份
+* Have fun!
