@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Pieces-of-Myself/static/css/main.1a57b0c7.css",
-    "main.js": "/Pieces-of-Myself/static/js/main.1a19855e.js",
+    "main.js": "/Pieces-of-Myself/static/js/main.976f7e27.js",
     "static/js/787.6b0c5608.chunk.js": "/Pieces-of-Myself/static/js/787.6b0c5608.chunk.js",
     "static/media/20221125-看门狗：军团的游玩感想.md": "/Pieces-of-Myself/static/media/20221125-看门狗：军团的游玩感想.8a7909281290b1bcb73c.md",
     "static/media/20221231-中国海军喷气式飞机飞越南海，距离美国空军飞机不到 10 英尺.md": "/Pieces-of-Myself/static/media/20221231-中国海军喷气式飞机飞越南海，距离美国空军飞机不到 10 英尺.55b6fafa64ac71e84889.md",
@@ -10,14 +10,15 @@
     "static/media/20220119-react-markdown.md": "/Pieces-of-Myself/static/media/20220119-react-markdown.a6d32bc9545ac26d7717.md",
     "static/media/20231209-China bridles as EU states prepare to scale up Covid monitoring.md": "/Pieces-of-Myself/static/media/20231209-China bridles as EU states prepare to scale up Covid monitoring.ab55eec0bab13f1dbd22.md",
     "index.html": "/Pieces-of-Myself/index.html",
+    "static/media/20221231-另一个作品 SpaceX Information System.md": "/Pieces-of-Myself/static/media/20221231-另一个作品 SpaceX Information System.9e606bb58e65ff3bc5b4.md",
     "static/media/title.md": "/Pieces-of-Myself/static/media/title.a8c30f7b22a3f6e607bc.md",
     "static/media/20221229-圣诞.md": "/Pieces-of-Myself/static/media/20221229-圣诞.ecf0e77576db97faf426.md",
     "main.1a57b0c7.css.map": "/Pieces-of-Myself/static/css/main.1a57b0c7.css.map",
-    "main.1a19855e.js.map": "/Pieces-of-Myself/static/js/main.1a19855e.js.map",
+    "main.976f7e27.js.map": "/Pieces-of-Myself/static/js/main.976f7e27.js.map",
     "787.6b0c5608.chunk.js.map": "/Pieces-of-Myself/static/js/787.6b0c5608.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1a57b0c7.css",
-    "static/js/main.1a19855e.js"
+    "static/js/main.976f7e27.js"
   ]
 }
