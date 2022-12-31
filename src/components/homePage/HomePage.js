@@ -41,7 +41,7 @@ const HomePage = () => {
             <p>Home</p>
           </Link>
           <Link to='/Pieces-of-Myself/about' className='homepage-nav-text'>
-            <p>About</p>
+            <p>About Me</p>
           </Link>
 
         </div>
