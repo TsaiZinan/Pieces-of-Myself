@@ -1,15 +1,6 @@
-# A demo of `react-markdown`
+# Pieces-of-Myself
 
-`react-markdown` is a markdown component for React.
+Pieces-of-Myself is a React-based blogging system.
 
-👉 Changes are re-rendered as you type.
+Pieces-of-Myself 是一个基于 React 的 Blog 系统。
 
-👈 Try writing some markdown on the left.
-
-## Overview
-
-* Follows [CommonMark](https://commonmark.org)
-* Optionally follows [GitHub Flavored Markdown](https://github.github.com/gfm/)
-* Renders actual React elements instead of using `dangerouslySetInnerHTML`
-* Lets you define your own components (to render `MyHeading` instead of `h1`)
-* Has a lot of plugins
