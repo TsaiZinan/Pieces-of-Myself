@@ -4,10 +4,12 @@
   width: 50%;
 }
 
-/* .tableOfContents-about {
+.tableOfContents-about {
+  color: var(--main-font-color-2);
+
   display: flex;
-  justify-content: center;
-} */
+  /* justify-content: center; */
+}
 
 .tableOfContents-main {
   display: flex;
@@ -21,6 +23,7 @@
 .tableOfContents-year {
   font-size: 2.5rem;
   font-weight: 100;
+  color: var(--main-font-color);
 
   display: flex;
   justify-content: flex-start;

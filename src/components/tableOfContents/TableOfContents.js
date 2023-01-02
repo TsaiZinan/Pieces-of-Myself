@@ -109,7 +109,7 @@ const TableOfContents = props => {
 
   return (
     <div  className='tableOfContents'>
-      <div   className='tableOfContents-about'>
+      <div className='tableOfContents-about'>
         {<MdDisplay inputMdText={title} />}
       </div>
       {
