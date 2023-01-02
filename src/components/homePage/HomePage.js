@@ -9,6 +9,7 @@ import MdDisplay from '../mdDisplay/MdDisplay';
 import ArticlePage from '../articlePage/ArticlePage';
 import AboutPage from '../aboutPage/AboutPage';
 import TableOfContents from '../tableOfContents/TableOfContents';
+import FooterPage from '../footer/FooterPage';
 
 
 import about from '../../blogs/about.md'
@@ -58,6 +59,11 @@ const HomePage = () => {
           <Route path="/Pieces-of-Myself/" element={<TableOfContents />} />
           <Route path="/Pieces-of-Myself/static/media/:path" element={<ArticlePage />} />
         </Routes>
+
+
+        <div className='homepage-footer'>
+          <FooterPage />
+        </div>
 
 
       </div>

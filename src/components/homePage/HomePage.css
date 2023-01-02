@@ -27,10 +27,23 @@
   /* display: flex; */
 }
 
+.homepage-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 50%;
+
+  
+}
 
 
 @media screen and (max-width: 710px) {
   .homepage-nav {
+    width: 85%;
+  }
+
+  .homepage-footer {
     width: 85%;
   }
 }
