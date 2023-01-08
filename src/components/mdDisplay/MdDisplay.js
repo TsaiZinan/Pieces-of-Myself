@@ -2,6 +2,7 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
 
 const MdDisplay = props => {
 
@@ -26,6 +27,7 @@ const MdDisplay = props => {
       <ReactMarkdown
         children={readable.md}
         components={{ img: ({ node, ...props }) => <img style={{ maxWidth: '100%' }}{...props} /> }}
+        remarkPlugins={[remarkGfm]}
       />
     </div>
   )
