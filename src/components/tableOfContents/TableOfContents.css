@@ -50,10 +50,57 @@
 }
 
 .tableOfContents-title-block {
+  display: flex;
+  /* align-items: center; */
+
   margin-bottom: 25px;
-  margin-left: 15px;
-  margin-right: 15px;
+  /* margin-left: 15px;
+  margin-right: 15px; */
 }
+
+.tableOfContents-title-block-dateBlock {
+  height: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid var(--main-font-color);
+  border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+  
+  font-size: 0.8rem;
+
+  /* padding: 2px; */
+  margin: 0.4rem 5px 0 5px;
+}
+
+.tableOfContents-title-block-dateBlock-month {
+  color: var(--main-bg-color);
+  background-color: var(--main-font-color);
+  padding: 0 0.3rem 0 0.3rem;
+  /* padding: 2px; */
+  border-radius: 0.2rem 0.2rem 0 0;
+}
+
+.tableOfContents-title-block-dateBlock-day {
+  display: flex;
+  align-items: center;
+  /* background-color: white; */
+  /* line-height: 0; */
+  font-size: 0.7rem;
+  color: var(--main-font-color);
+
+  /* border: 1px solid var(--main-font-color);
+  border-radius: 0 0 0.4rem 0.4rem; */
+  
+  /* width: 100%;
+  margin: 0 2px 0 2px; */
+}
+
+/* p.tableOfContents-title-block-dateBlock-day {
+  margin: 0;
+} */
 
 .tableOfContents-title {
   text-decoration: none;

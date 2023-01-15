@@ -99,9 +99,34 @@ const TableOfContents = props => {
     return finalObject;
   }
 
-  const monthConverter = (month) => {
+  // convert number to month 
+  // form: 0: full 1: Abbr.
+  const monthConverter = (month, form) => {
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    return monthNames[month-1]
+    const monthNamesAbbr = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+
+    return ( form == 0 ? monthNames[month-1] : form == 1 ? monthNamesAbbr[month-1] : 'ERROR')
+    // return monthNames[month-1]
+  }
+
+  const dataBlock = (date) => {
+    
+    let month = date.slice(4, 6);
+    let day = date.slice(6, 8);
+
+    
+
+
+    return (
+      <div className='tableOfContents-title-block-dateBlock'>
+        <div className='tableOfContents-title-block-dateBlock-month'>
+          {monthConverter(month, 1)}
+        </div>
+        <div className='tableOfContents-title-block-dateBlock-day'>
+          {day}
+        </div>
+      </div>
+    )
   }
 
 
@@ -129,9 +154,9 @@ const TableOfContents = props => {
                 // console.log(tableOfContentsHandle()[year][0][month]);
                 return (
                   <div className='tableOfContents-month-block'>
-                    <div className='tableOfContents-month'>
-                      {monthConverter(month)}
-                    </div>
+                    {/* <div className='tableOfContents-month'>
+                      {monthConverter(month, 0)}
+                    </div> */}
 
                     {/* display the title by date descending */}
                     {tableOfContentsHandle()[year][0][month].reverse().map((title, titleIndex) => {
@@ -139,6 +164,7 @@ const TableOfContents = props => {
                       // console.log(tableOfContentsHandle()[year][0][month][0].Title);
                       return (
                         <div className='tableOfContents-title-block'>
+                          {dataBlock(title.Date)}
                           <Link to={title.link} className='tableOfContents-title'>
                             {title.Title}
                           </Link>
