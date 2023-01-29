@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Pieces-of-Myself/static/css/main.ce2676f1.css",
-    "main.js": "/Pieces-of-Myself/static/js/main.8c1ed66f.js",
+    "main.js": "/Pieces-of-Myself/static/js/main.83b14bf4.js",
     "static/js/787.6b0c5608.chunk.js": "/Pieces-of-Myself/static/js/787.6b0c5608.chunk.js",
     "static/media/20230108-[回顾性报道] 中国战“疫”进入新阶段——我国因时因势优化疫情防控措施纪实.md": "/Pieces-of-Myself/static/media/20230108-[回顾性报道] 中国战“疫”进入新阶段——我国因时因势优化疫情防控措施纪实.2091dd40aadfb2bd119b.md",
     "static/media/20221125-看门狗：军团的游玩感想.md": "/Pieces-of-Myself/static/media/20221125-看门狗：军团的游玩感想.8a7909281290b1bcb73c.md",
-    "static/media/about.md": "/Pieces-of-Myself/static/media/about.9703ad40333184775f58.md",
+    "static/media/about.md": "/Pieces-of-Myself/static/media/about.281c468b9486f5421c14.md",
     "static/media/20221209-12月9日新十条发布后的一点想法.md": "/Pieces-of-Myself/static/media/20221209-12月9日新十条发布后的一点想法.927c38f738fbd7dc103a.md",
     "static/media/20220119-react-markdown.md": "/Pieces-of-Myself/static/media/20220119-react-markdown.a6d32bc9545ac26d7717.md",
     "index.html": "/Pieces-of-Myself/index.html",
     "static/media/20221231-另一个作品 SpaceX Information System.md": "/Pieces-of-Myself/static/media/20221231-另一个作品 SpaceX Information System.9e606bb58e65ff3bc5b4.md",
     "static/media/title.md": "/Pieces-of-Myself/static/media/title.a8c30f7b22a3f6e607bc.md",
     "main.ce2676f1.css.map": "/Pieces-of-Myself/static/css/main.ce2676f1.css.map",
-    "main.8c1ed66f.js.map": "/Pieces-of-Myself/static/js/main.8c1ed66f.js.map",
+    "main.83b14bf4.js.map": "/Pieces-of-Myself/static/js/main.83b14bf4.js.map",
     "787.6b0c5608.chunk.js.map": "/Pieces-of-Myself/static/js/787.6b0c5608.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ce2676f1.css",
-    "static/js/main.8c1ed66f.js"
+    "static/js/main.83b14bf4.js"
   ]
 }
