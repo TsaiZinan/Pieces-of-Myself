@@ -58,7 +58,7 @@
   margin-right: 15px; */
 }
 
-.tableOfContents-title-block-dateBlock {
+/* .tableOfContents-title-block-dateBlock {
   height: 2rem;
 
   display: flex;
@@ -71,32 +71,68 @@
   
   font-size: 0.8rem;
 
-  /* padding: 2px; */
+  
   margin: 0.4rem 5px 0 5px;
-}
+} */
 
-.tableOfContents-title-block-dateBlock-month {
+/* .tableOfContents-title-block-dateBlock-month {
   color: var(--main-bg-color);
   background-color: var(--main-font-color);
   padding: 0 0.3rem 0 0.3rem;
-  /* padding: 2px; */
   border-radius: 0.2rem 0.2rem 0 0;
 }
 
 .tableOfContents-title-block-dateBlock-day {
   display: flex;
   align-items: center;
-  /* background-color: white; */
-  /* line-height: 0; */
+  
   font-size: 0.7rem;
   color: var(--main-font-color);
+} */
 
-  /* border: 1px solid var(--main-font-color);
-  border-radius: 0 0 0.4rem 0.4rem; */
-  
-  /* width: 100%;
-  margin: 0 2px 0 2px; */
+.tableOfContents-title-block-dateBlock {
+  width: 2rem; /* 可根据实际需要调整 */
+  height: 1.5rem; /* 可根据实际需要调整 */
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 9px 7px 0 0;
 }
+
+.tableOfContents-title-block-dateBlock-month {
+  font-size: 0.8rem; /* 可根据实际需要调整 */
+  font-weight: bold;
+  color: var(--main-bg-color);
+  background-color: var(--main-font-color);
+  border-radius: 0.2rem 0.2rem 0 0;
+  padding: 0.5px; /* 可根据实际需要调整 */
+  text-align: center;
+  width: 100%;
+  border: 1.2px solid transparent; /* 新增的样式 */
+}
+
+.tableOfContents-title-block-dateBlock-day {
+  font-size: 0.8rem; /* 可根据实际需要调整 */
+  color: var(--main-font-color);
+  background-color: var(--main-bg-color);
+  border-radius: 0 0 0.2rem 0.2rem;
+  padding: 0.5px; /* 可根据实际需要调整 */
+  text-align: center;
+  width: 100%;
+  border: 1.2px solid var(--main-font-color); /* 新增的样式 */
+}
+
+
+
+
+
+
+
+
+
 
 /* p.tableOfContents-title-block-dateBlock-day {
   margin: 0;
