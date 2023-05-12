@@ -13,6 +13,7 @@ import FooterPage from '../footer/FooterPage';
 
 
 import about from '../../blogs/about.md'
+import short from '../../blogs/short.md'
 
 
 
@@ -41,8 +42,11 @@ const HomePage = () => {
           <Link to='/' className='homepage-nav-text'>
             <p>Home</p>
           </Link>
-          <Link to='/about' className='homepage-nav-text'>
+          {/* <Link to='/about' className='homepage-nav-text'>
             <p>About</p>
+          </Link> */}
+          <Link to='/short' className='homepage-nav-text'>
+            <p>Short</p>
           </Link>
 
         </div>
@@ -56,6 +60,7 @@ const HomePage = () => {
             <Route path="/Pieces-of-Myself/about" element={<MdDisplay inputMdText={about} />} />
           </div> */}
           <Route path="/about" element={<AboutPage about={about} />} />
+          <Route path="/short" element={<AboutPage about={short} />} />
           <Route path="/" element={<TableOfContents />} />
           <Route path="/Pieces-of-Myself/static/media/:path" element={<ArticlePage />} />
         </Routes>

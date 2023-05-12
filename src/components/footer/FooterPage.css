@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: row;
 
+  justify-content: space-between;
+
   /* border-top: 2px solid var(--main-font-color-2); */
   padding-top: 5px;
 }
@@ -18,4 +20,21 @@
   color: var(--main-font-color);
 
   padding: 8px 8px 8px 0;
+}
+
+.footerPage-link {
+  font-size: 25px;
+  color: var(--main-font-color);
+
+  display: flex;
+}
+
+.footerPage-link-text {
+  text-decoration: none;
+  color: var(--main-font-color);
+  font-size: 1.5rem;
+
+  margin-top: -4px;
+  
+  /* display: flex; */
 }
