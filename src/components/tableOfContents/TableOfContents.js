@@ -6,6 +6,7 @@ import './TableOfContents.css';
 import MdDisplay from '../mdDisplay/MdDisplay';
 
 import title from '../../blogs/title.md'
+import short from '../../blogs/short.md'
 
 
 const TableOfContents = props => {
@@ -105,16 +106,16 @@ const TableOfContents = props => {
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const monthNamesAbbr = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 
-    return ( form == 0 ? monthNames[month-1] : form == 1 ? monthNamesAbbr[month-1] : 'ERROR')
+    return (form == 0 ? monthNames[month - 1] : form == 1 ? monthNamesAbbr[month - 1] : 'ERROR')
     // return monthNames[month-1]
   }
 
   const dataBlock = (date) => {
-    
+
     let month = date.slice(4, 6);
     let day = date.slice(6, 8);
 
-    
+
 
 
     return (
@@ -133,10 +134,19 @@ const TableOfContents = props => {
 
 
   return (
-    <div  className='tableOfContents'>
+    <div className='tableOfContents'>
       <div className='tableOfContents-about'>
         {<MdDisplay inputMdText={title} />}
       </div>
+
+      <div className='tableOfContents-short-title'>
+        Short
+      </div>
+      <div className='tableOfContents-short'>
+
+        {<MdDisplay inputMdText={short} />}
+      </div>
+
       {
         // display the year by descending
         Object.keys(tableOfContentsHandle()).sort().reverse().map((year, yearIndex) => {
