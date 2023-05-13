@@ -38,7 +38,8 @@
 
   color: var(--main-font-color-2);
 
-  text-align: center;
+  /* text-align: center; */
+  /* line-height: 6px; */
 
   border: 3px solid;
   border-radius: 10px;
@@ -50,6 +51,15 @@
 
   max-height: 200px;
   overflow: scroll;
+}
+
+.tableOfContents-short h4{
+  margin-top: -16px;
+  /* margin-bottom: 30px; */
+}
+
+.tableOfContents-short p{
+  font-size: 18px;
 }
 
 .tableOfContents-main {
