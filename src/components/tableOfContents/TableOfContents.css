@@ -15,7 +15,6 @@
 
 .tableOfContents-short-title {
   background-color: var(--main-bg-color);
-  color: var(--main-font-color-2);
 
   position: relative;
   z-index: 2;
@@ -27,6 +26,13 @@
   margin-left: 10px;
 
   padding: 5px;
+
+  border-radius: 5px;
+}
+
+.tableOfContents-short-title-link {
+  color: var(--main-font-color-2);
+  text-decoration: none;
 }
 
 .tableOfContents-short {
@@ -50,23 +56,32 @@
   /* justify-content: center; */
 
   max-height: 200px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.tableOfContents-short::-webkit-scrollbar {
+  display: none;
 }
 
 .tableOfContents-short h4{
   margin-top: -16px;
+  font-weight: 500;
   /* margin-bottom: 30px; */
 }
 
 .tableOfContents-short p{
-  font-size: 18px;
+  font-size: 17px;
 }
+
+
+
 
 .tableOfContents-main {
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   margin-top: 30px;
   /* align-items: flex-start; */
 

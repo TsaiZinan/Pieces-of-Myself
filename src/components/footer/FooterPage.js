@@ -20,11 +20,11 @@ const FooterPage = () => {
         </a>
       </div>
 
-      <div className='footerPage-link'>
+      {/* <div className='footerPage-link'>
         <Link to='/about' className='footerPage-link-text'>
           About
         </Link>
-      </div>
+      </div> */}
 
     </div>
   )

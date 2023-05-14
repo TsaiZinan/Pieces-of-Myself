@@ -36,8 +36,8 @@ const TableOfContents = props => {
       acc[key] = mdFiles[key];
       return acc;
     }, {});
-    // console.log('----------1.2-----------')
-    // console.log(filtedFilenames)
+    console.log('----------1.2-----------')
+    console.log(filtedFilenames)
 
     // add keys to objects
     // https://stackoverflow.com/a/44407980/20787775
@@ -48,11 +48,11 @@ const TableOfContents = props => {
       Date: obj[0].slice(0, 8),
       Title: obj[0].slice(9, -3),
       path: obj[0],
-      link: obj[1]
+      link: obj[1] + '/#top'
     }));
 
-    // console.log('----------1.5-----------')
-    // console.log(filenameObjectWithKey)
+    console.log('----------1.5-----------')
+    console.log(filenameObjectWithKey)
 
 
 
@@ -101,14 +101,21 @@ const TableOfContents = props => {
   }
 
   // convert number to month 
-  // form: 0: full 1: Abbr.
-  const monthConverter = (month, form) => {
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const monthNamesAbbr = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-
-    return (form == 0 ? monthNames[month - 1] : form == 1 ? monthNamesAbbr[month - 1] : 'ERROR')
-    // return monthNames[month-1]
+  // default: en
+  const getMonthName = (month, language = 'en') => {
+    const months = {
+      en: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+      zh: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+      ja: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+      ar: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر']
+    };
+  
+    month = Number(month);
+    if (isNaN(month) || month < 1 || month > 12) return 'ERR';
+    if (!months[language]) return 'ERR';
+    return months[language][month - 1];
   }
+  
 
   const dataBlock = (date) => {
 
@@ -121,7 +128,7 @@ const TableOfContents = props => {
     return (
       <div className='tableOfContents-title-block-dateBlock'>
         <div className='tableOfContents-title-block-dateBlock-month'>
-          {monthConverter(month, 1)}
+          {getMonthName(month, 'en')}
         </div>
         <div className='tableOfContents-title-block-dateBlock-day'>
           {day}
@@ -140,7 +147,9 @@ const TableOfContents = props => {
       </div>
 
       <div className='tableOfContents-short-title'>
-        Short
+        <Link to='/short' className='tableOfContents-short-title-link'>
+          Short
+        </Link>
       </div>
       <div className='tableOfContents-short'>
 
