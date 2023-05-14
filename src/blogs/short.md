@@ -18,4 +18,4 @@
 
 2023 04 30
 #### 整理截图，发现我是有多爱wows这游戏啊
-![Imgur](https://i.imgur.com/1fANIil.jpg)
+![Imgur](https://i.imgur.com/1fANIil.jpeg)

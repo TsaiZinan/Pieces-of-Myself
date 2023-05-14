@@ -45,8 +45,8 @@ const HomePage = () => {
           {/* <Link to='/about' className='homepage-nav-text'>
             <p>About</p>
           </Link> */}
-          <Link to='/short' className='homepage-nav-text'>
-            <p>Short</p>
+          <Link to='/about' className='homepage-nav-text'>
+            <p>About</p>
           </Link>
 
         </div>
