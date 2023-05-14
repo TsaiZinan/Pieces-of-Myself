@@ -1,6 +1,6 @@
-# Pieces-of-Myself
+# Pieces of Myself
 
-Pieces-of-Myself is a React-based blogging system.
+Pieces of Myself 是一个我自己编写的个人文字平台。
 
-Pieces-of-Myself 是一个基于 React 的 Blog 系统。
+Short板块包含所有的短文字。下面的是非短篇文章。
 
