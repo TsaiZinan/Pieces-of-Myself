@@ -6,16 +6,18 @@ import { RiWeiboLine, RiGithubLine, RiLinkedinLine } from "react-icons/ri";
 
 import './FooterPage.css'
 
+import config from '../../config';
+
 
 const FooterPage = () => {
   return (
     <div className='footerPage'>
       
       <div className='footerPage-icons'>
-        <a className='footerPage-icons-link' href="https://github.com/TsaiZinan">
+        <a className='footerPage-icons-link' href={config.githubUrl}>
           <RiGithubLine />
         </a>
-        <a className='footerPage-icons-link' href="https://weibo.com/1932764551">
+        <a className='footerPage-icons-link' href={config.weiboUrl}>
           <RiWeiboLine />
         </a>
       </div>

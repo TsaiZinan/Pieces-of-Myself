@@ -8,6 +8,8 @@ import MdDisplay from '../mdDisplay/MdDisplay';
 import title from '../../blogs/title.md'
 import short from '../../blogs/short.md'
 
+import config from '../../config';
+
 
 const TableOfContents = props => {
 
@@ -109,13 +111,13 @@ const TableOfContents = props => {
       ja: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
       ar: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر']
     };
-  
+
     month = Number(month);
     if (isNaN(month) || month < 1 || month > 12) return 'ERR';
     if (!months[language]) return 'ERR';
     return months[language][month - 1];
   }
-  
+
 
   const dataBlock = (date) => {
 
@@ -146,15 +148,23 @@ const TableOfContents = props => {
         {<MdDisplay inputMdText={title} />}
       </div>
 
-      <div className='tableOfContents-short-title'>
-        <Link to='/short' className='tableOfContents-short-title-link'>
-          Short
-        </Link>
-      </div>
-      <div className='tableOfContents-short'>
+      {config.isShort === true ?
+        <div>
+          <div className='tableOfContents-short-title'>
+            <Link to='/short' className='tableOfContents-short-title-link'>
+              Short
+            </Link>
+          </div>
+          <div className='tableOfContents-short'>
 
-        {<MdDisplay inputMdText={short} />}
-      </div>
+            {<MdDisplay inputMdText={short} />}
+          </div>
+        </div>
+        : null}
+
+
+
+
 
       {
         // display the year by descending

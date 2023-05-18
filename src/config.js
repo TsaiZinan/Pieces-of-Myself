@@ -1,8 +1,8 @@
 const config = {
-  apiUrl: 'https://example.com/api',
-  maxItemsPerPage: 10,
   isDebugMode: false,
-  isShort: true
+  isShort: true,
+  githubUrl: 'https://github.com/TsaiZinan',
+  weiboUrl: 'https://weibo.com/1932764551'
 };
 
 export default config;
