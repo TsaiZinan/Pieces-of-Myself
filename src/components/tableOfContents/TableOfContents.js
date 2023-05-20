@@ -16,7 +16,8 @@ const TableOfContents = props => {
 
   // read the files name list of blog folder
   // https://stackoverflow.com/questions/65587431/load-a-list-of-internal-files-in-react
-  const webpackContext = require.context('../../blogs/', false, /\.md$/)
+  const webpackContext = require.context('../../blogs/', false, /\.md$/);
+  // console.log(webpackContext)
 
 
   const tableOfContentsHandle = () => {
@@ -25,6 +26,7 @@ const TableOfContents = props => {
     function importAll(r) {
       let mdFiles = {};
       r.keys().map(item => { mdFiles[item.replace('./', '')] = r(item); });
+      // console.log(mdFiles)
       return mdFiles;
     }
 
@@ -38,8 +40,8 @@ const TableOfContents = props => {
       acc[key] = mdFiles[key];
       return acc;
     }, {});
-    console.log('----------1.2-----------')
-    console.log(filtedFilenames)
+    // console.log('----------1.2-----------')
+    // console.log(filtedFilenames)
 
     // add keys to objects
     // https://stackoverflow.com/a/44407980/20787775
@@ -53,14 +55,23 @@ const TableOfContents = props => {
       link: obj[1] + '/#top'
     }));
 
-    console.log('----------1.5-----------')
-    console.log(filenameObjectWithKey)
+    // console.log('----------1.5-----------')
+    // console.log(filenameObjectWithKey)
+
+    // remove '/Pieces-of-Myself' from each link
+    const filenameObjectWithKeyAndLink = filenameObjectWithKey.map(item => {
+      item.link = item.link.replace('/Pieces-of-Myself', '');
+      return item;
+    });
+
+    // console.log('----------1.6-----------')
+    // console.log(filenameObjectWithKeyAndLink)
 
 
 
     // group text name list by year
     // https://stackoverflow.com/a/40774906/20787775
-    var filenameObjectWithKeyGroupByYear = filenameObjectWithKey.reduce(function (r, a) {
+    var filenameObjectWithKeyGroupByYear = filenameObjectWithKeyAndLink.reduce(function (r, a) {
       r[a.Year] = r[a.Year] || [];
       r[a.Year].push(a);
       return r;

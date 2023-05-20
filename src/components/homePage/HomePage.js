@@ -62,7 +62,7 @@ const HomePage = () => {
           <Route path="/about" element={<AboutPage about={about} />} />
           <Route path="/short" element={<AboutPage about={short} />} />
           <Route path="/" element={<TableOfContents />} />
-          <Route path="/Pieces-of-Myself/static/media/:path" element={<ArticlePage />} />
+          <Route path="/static/media/:path" element={<ArticlePage />} />
         </Routes>
 
 
