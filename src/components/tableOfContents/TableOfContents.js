@@ -8,13 +8,16 @@ import MdDisplay from '../mdDisplay/MdDisplay';
 import title from '../../blogs/title.md'
 import short from '../../blogs/short.md'
 
+import config from '../../config';
+
 
 const TableOfContents = props => {
 
 
   // read the files name list of blog folder
   // https://stackoverflow.com/questions/65587431/load-a-list-of-internal-files-in-react
-  const webpackContext = require.context('../../blogs/', false, /\.md$/)
+  const webpackContext = require.context('../../blogs/', false, /\.md$/);
+  // console.log(webpackContext)
 
 
   const tableOfContentsHandle = () => {
@@ -23,6 +26,7 @@ const TableOfContents = props => {
     function importAll(r) {
       let mdFiles = {};
       r.keys().map(item => { mdFiles[item.replace('./', '')] = r(item); });
+      // console.log(mdFiles)
       return mdFiles;
     }
 
@@ -36,8 +40,8 @@ const TableOfContents = props => {
       acc[key] = mdFiles[key];
       return acc;
     }, {});
-    console.log('----------1.2-----------')
-    console.log(filtedFilenames)
+    // console.log('----------1.2-----------')
+    // console.log(filtedFilenames)
 
     // add keys to objects
     // https://stackoverflow.com/a/44407980/20787775
@@ -51,14 +55,23 @@ const TableOfContents = props => {
       link: obj[1] + '/#top'
     }));
 
-    console.log('----------1.5-----------')
-    console.log(filenameObjectWithKey)
+    // console.log('----------1.5-----------')
+    // console.log(filenameObjectWithKey)
+
+    // remove '/Pieces-of-Myself' from each link
+    const filenameObjectWithKeyAndLink = filenameObjectWithKey.map(item => {
+      item.link = item.link.replace('/Pieces-of-Myself', '');
+      return item;
+    });
+
+    // console.log('----------1.6-----------')
+    // console.log(filenameObjectWithKeyAndLink)
 
 
 
     // group text name list by year
     // https://stackoverflow.com/a/40774906/20787775
-    var filenameObjectWithKeyGroupByYear = filenameObjectWithKey.reduce(function (r, a) {
+    var filenameObjectWithKeyGroupByYear = filenameObjectWithKeyAndLink.reduce(function (r, a) {
       r[a.Year] = r[a.Year] || [];
       r[a.Year].push(a);
       return r;
@@ -109,13 +122,13 @@ const TableOfContents = props => {
       ja: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
       ar: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر']
     };
-  
+
     month = Number(month);
     if (isNaN(month) || month < 1 || month > 12) return 'ERR';
     if (!months[language]) return 'ERR';
     return months[language][month - 1];
   }
-  
+
 
   const dataBlock = (date) => {
 
@@ -146,15 +159,23 @@ const TableOfContents = props => {
         {<MdDisplay inputMdText={title} />}
       </div>
 
-      <div className='tableOfContents-short-title'>
-        <Link to='/short' className='tableOfContents-short-title-link'>
-          Short
-        </Link>
-      </div>
-      <div className='tableOfContents-short'>
+      {config.isShort === true ?
+        <div>
+          <div className='tableOfContents-short-title'>
+            <Link to='/short' className='tableOfContents-short-title-link'>
+              Short
+            </Link>
+          </div>
+          <div className='tableOfContents-short'>
 
-        {<MdDisplay inputMdText={short} />}
-      </div>
+            {<MdDisplay inputMdText={short} />}
+          </div>
+        </div>
+        : null}
+
+
+
+
 
       {
         // display the year by descending
