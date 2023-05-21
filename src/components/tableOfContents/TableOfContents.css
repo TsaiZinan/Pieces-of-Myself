@@ -39,6 +39,8 @@
   position: relative;
   z-index: 1;
 
+  display: flex;
+
   /* display: flex;
   align-items: flex-start; */
 
@@ -52,8 +54,8 @@
 
   padding: 20px;
 
-  /* display: flex; */
-  /* justify-content: center; */
+  /* display: flex;
+  justify-content: center; */
 
   max-height: 200px;
   overflow-y: scroll;
@@ -76,6 +78,8 @@
 
 .tableOfContents-short img{
   border-radius: 8px;
+  width: 80%;
+  margin: 0 10% 0 10%;
 }
 
 
