@@ -41,3 +41,6 @@ Pieces-of-Myself 是一个基于 React 的 Blog 系统。
 * 基于 markdown 格式，脱离平台依赖，无数软件支持
 * 随时可以下载备份
 * Have fun!
+
+
+![picture 1](https://i.imgur.com/i1fRSXV.jpg)  
