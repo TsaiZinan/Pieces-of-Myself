@@ -52,18 +52,37 @@ const MdDisplay = props => {
       <Modal
         isOpen={!!modalImage}
         onRequestClose={closeModal}
-        className="Modal"
-        overlayClassName="Overlay">
+        // className="Modal"
+        // overlayClassName="Overlay"
+        style={{
+          overlay: {
+            backgroundColor: 'rgba(99, 112, 107, 0.45)',
+            zIndex: 10000  // Set the z-index value to a high number
+          },
+          content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            backgroundColor: 'transparent',
+            border: 'none',
+            padding: '0',
+            overflow: 'visible'
+          }
+        }}
+      >
 
         <img
           className='modal-image'
-          src={modalImage} 
+          src={modalImage}
         />
 
         <button
           onClick={closeModal}
-          className='modal-close-button'>
-
+          className='modal-close-button'
+        >
           &times;
         </button>
 

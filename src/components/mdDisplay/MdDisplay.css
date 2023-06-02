@@ -1,15 +1,9 @@
-.Modal {
+/* .Modal {
     position: absolute;
     top: 50%;
     left: 50%;
-    right: auto;
-    bottom: auto;
-    margin-right: -50%;
     transform: translate(-50%, -50%);
     background-color: transparent;
-    border: none;
-    padding: 0;
-    overflow: visible;
 }
 
 .Overlay {
@@ -20,7 +14,7 @@
     bottom: 0;
     background-color: rgba(99, 112, 107, 0.45);
     z-index: 200;
-}
+} */
 
 
 .modal-image {
