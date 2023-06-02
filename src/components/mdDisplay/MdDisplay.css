@@ -1,3 +1,28 @@
+.Modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    overflow: visible;
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(99, 112, 107, 0.45);
+    z-index: 200;
+}
+
+
 .modal-image {
     max-width: 90vw;
     max-height: 90vh;
