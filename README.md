@@ -2,7 +2,7 @@
 
 这里是我搭建的一个个人文字记录平台，为了能让我随心所欲地日常碎碎念。
 
-你可以通过 [tsaizinan.github.io/Pieces-of-Myself](tsaizinan.github.io/Pieces-of-Myself) 这个网址访问。
+你可以通过 https://tsaizinan.github.io/Pieces-of-Myself/ 这个网址访问。
 
 但这也是一个比很多其他博客平台都好的平台(自认为)！
 
