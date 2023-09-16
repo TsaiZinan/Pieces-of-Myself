@@ -23,3 +23,8 @@
 body {
   background-color: var(--main-bg-color);
 }
+
+img {
+  margin: auto;
+  display: block;
+}

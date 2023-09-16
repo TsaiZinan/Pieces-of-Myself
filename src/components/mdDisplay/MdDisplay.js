@@ -40,11 +40,17 @@ const MdDisplay = props => {
         components={{
           img: ({ node, ...props }) => (
             <img
-              style={{ maxWidth: '100%', cursor: 'pointer' }}
+              style={{ maxWidth: '70%', cursor: 'pointer'}}
               onClick={() => openModal(props.src)}
               {...props}
             />
-          )
+          ),
+          // table: ({ node, ...props }) => (
+          //   <table
+          //     style={{ borderStyle: 'solid', borderColor: 'var(--main-font-color)'}}
+          //     {...props}
+          //   />
+          // )
         }}
         remarkPlugins={[remarkGfm]}
       />
