@@ -4,6 +4,23 @@
   width: 50%;
 
   color: var(--main-font-color-2);
+  
+}
+
+table,
+thead {
+  border: 2px solid var(--main-font-color);
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+
+tr,
+td,
+th {
+  border: 1px solid var(--main-font-color-2);
+  border-collapse: collapse;
+  padding: 5px;
 }
 
 @media screen and (max-width: 710px) {
