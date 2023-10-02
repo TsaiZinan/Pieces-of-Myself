@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/Pieces-of-Myself/static/css/main.898f54c6.css",
-    "main.js": "/Pieces-of-Myself/static/js/main.5bfff625.js",
+    "main.js": "/Pieces-of-Myself/static/js/main.c174dc5c.js",
     "static/js/787.6b0c5608.chunk.js": "/Pieces-of-Myself/static/js/787.6b0c5608.chunk.js",
     "static/media/20230925-[流量预警] YouTube Music Liked Music Playlist.md": "/Pieces-of-Myself/static/media/20230925-[流量预警] YouTube Music Liked Music Playlist.55b9c8b61e16947b30e6.md",
+    "static/media/20211111-[键政基础]中共中央关于党的百年奋斗重大成就和历史经验的决议.md": "/Pieces-of-Myself/static/media/20211111-[键政基础]中共中央关于党的百年奋斗重大成就和历史经验的决议.97e4ad8252fdcae66fda.md",
     "static/media/20230523-参谋长联席会议主席马克·米利关于如何避免大国战争的专访字幕.md": "/Pieces-of-Myself/static/media/20230523-参谋长联席会议主席马克·米利关于如何避免大国战争的专访字幕.bb8d05aaa01e09818292.md",
     "static/media/20230108-[回顾性报道] 中国战“疫”进入新阶段——我国因时因势优化疫情防控措施纪实.md": "/Pieces-of-Myself/static/media/20230108-[回顾性报道] 中国战“疫”进入新阶段——我国因时因势优化疫情防控措施纪实.2091dd40aadfb2bd119b.md",
     "static/media/20201014-使用Aerialod渲染3D体素化地形图的流程总结.md": "/Pieces-of-Myself/static/media/20201014-使用Aerialod渲染3D体素化地形图的流程总结.cfb2e918f331055ed3d7.md",
@@ -27,11 +28,11 @@
     "static/media/title.md": "/Pieces-of-Myself/static/media/title.9fb09dc2c0c2bbebafbf.md",
     "static/media/20221231-另一个作品 SpaceX Information System.md": "/Pieces-of-Myself/static/media/20221231-另一个作品 SpaceX Information System.9e606bb58e65ff3bc5b4.md",
     "main.898f54c6.css.map": "/Pieces-of-Myself/static/css/main.898f54c6.css.map",
-    "main.5bfff625.js.map": "/Pieces-of-Myself/static/js/main.5bfff625.js.map",
+    "main.c174dc5c.js.map": "/Pieces-of-Myself/static/js/main.c174dc5c.js.map",
     "787.6b0c5608.chunk.js.map": "/Pieces-of-Myself/static/js/787.6b0c5608.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.898f54c6.css",
-    "static/js/main.5bfff625.js"
+    "static/js/main.c174dc5c.js"
   ]
 }
